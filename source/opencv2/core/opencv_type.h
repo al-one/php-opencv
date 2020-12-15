@@ -27,10 +27,15 @@ extern zend_class_entry *opencv_rotated_rect_ce;
 
 
 #define Z_PHP_POINT_OBJ_P(zv)  get_point_obj(Z_OBJ_P(zv))
+#define Z_PHP_POINT_OBJ(zo)    get_point_obj(zo)
 #define Z_PHP_SCALAR_OBJ_P(zv)  get_scalar_obj(Z_OBJ_P(zv))
+#define Z_PHP_SCALAR_OBJ(zo)    get_scalar_obj(zo)
 #define Z_PHP_SIZE_OBJ_P(zv)  get_size_obj(Z_OBJ_P(zv))
+#define Z_PHP_SIZE_OBJ(zo)    get_size_obj(zo)
 #define Z_PHP_RECT_OBJ_P(zv)  get_rect_obj(Z_OBJ_P(zv))
+#define Z_PHP_RECT_OBJ(zo)    get_rect_obj(zo)
 #define Z_PHP_ROTATED_RECT_OBJ_P(zv)  get_rotated_rect_obj(Z_OBJ_P(zv))
+#define Z_PHP_ROTATED_RECT_OBJ(zo)    get_rotated_rect_obj(zo)
 
 
 typedef struct _opencv_point_object{

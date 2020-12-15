@@ -204,16 +204,19 @@ PHP_METHOD(opencv_lbph_face_recognizer, update)
     RETURN_NULL();
 }
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_void, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 /**
  * opencv_lbph_face_recognizer_methods[]
  */
 const zend_function_entry opencv_lbph_face_recognizer_methods[] = {
-        PHP_ME(opencv_lbph_face_recognizer, create, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
-        PHP_ME(opencv_lbph_face_recognizer, train, NULL, ZEND_ACC_PUBLIC)
+        PHP_ME(opencv_lbph_face_recognizer, create, arginfo_void, ZEND_ACC_PUBLIC|ZEND_ACC_STATIC)
+        PHP_ME(opencv_lbph_face_recognizer, train, arginfo_void, ZEND_ACC_PUBLIC)
         PHP_ME(opencv_lbph_face_recognizer, predict, opencv_lbph_face_recognizer_predict_arginfo, ZEND_ACC_PUBLIC)
-        PHP_ME(opencv_lbph_face_recognizer, read, NULL, ZEND_ACC_PUBLIC)
-        PHP_ME(opencv_lbph_face_recognizer, write, NULL, ZEND_ACC_PUBLIC)
-        PHP_ME(opencv_lbph_face_recognizer, update, NULL, ZEND_ACC_PUBLIC)
+        PHP_ME(opencv_lbph_face_recognizer, read, arginfo_void, ZEND_ACC_PUBLIC)
+        PHP_ME(opencv_lbph_face_recognizer, write, arginfo_void, ZEND_ACC_PUBLIC)
+        PHP_ME(opencv_lbph_face_recognizer, update, arginfo_void, ZEND_ACC_PUBLIC)
         PHP_FE_END
 };
 /* }}} */
